@@ -1,9 +1,22 @@
-import React, { Component } from 'react'
+import React, * as react from 'react'
 
-class HelloWorld extends Component {
+class Octocat extends react.Component {
+  state = {}
   render() {
-    return <h1>Hello, World!</h1>
+    return (
+      <article className="cat-element">
+        <div className="top-image">
+          <img className="main-image" src={this.props.img} />
+        </div>
+        <div className="image-footer">
+          <p className="number">#{this.props.number}</p>
+          <p>
+            <a href={this.props.nameLink}>{this.props.name} </a>
+          </p>
+        </div>
+      </article>
+    )
   }
 }
 
-export default HelloWorld
+export default Octocat
